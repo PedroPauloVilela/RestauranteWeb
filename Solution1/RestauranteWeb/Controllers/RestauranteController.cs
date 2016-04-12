@@ -74,7 +74,6 @@ namespace RestauranteWeb.Controllers
             ArmazenaPratoMarcadoNoBanco(restaurante);
             return View(restaurante);
         }
-        }
 
         // GET: /Restaurante/Edit/5
         public ActionResult Edit(int? id)

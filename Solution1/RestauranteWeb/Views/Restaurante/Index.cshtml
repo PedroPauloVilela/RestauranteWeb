@@ -1,18 +1,18 @@
 ﻿@model IEnumerable<RestauranteWeb.Models.Restaurante>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Restaurantes";
 }
 
-<h2>Index</h2>
+<h2>Restaurantes</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Novo", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.NomeRestaurante)
+            <label class="control-label col-md-2">Nome do Restaurante</label>
         </th>
         <th></th>
     </tr>
@@ -23,9 +23,9 @@
             @Html.DisplayFor(modelItem => item.NomeRestaurante)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("Editar", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Visualizar", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.ID })
         </td>
     </tr>
 }

@@ -1,10 +1,10 @@
 ﻿@model RestauranteWeb.Models.Prato
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Cadastrar";
 }
 
-<h2>Create</h2>
+<h2>Cadastrar</h2>
 
 
 @using (Html.BeginForm()) 
@@ -17,7 +17,7 @@
         @Html.ValidationSummary(true)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.NomePrato, new { @class = "control-label col-md-2" })
+            <label class="control-label col-md-2">Nome do Prato</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.NomePrato)
                 @Html.ValidationMessageFor(model => model.NomePrato)
@@ -25,7 +25,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.PrecoPrato, new { @class = "control-label col-md-2" })
+            <label class="control-label col-md-2">Preço do Prato</label>
             <div class="col-md-10">
                 @Html.EditorFor(model => model.PrecoPrato)
                 @Html.ValidationMessageFor(model => model.PrecoPrato)
@@ -34,14 +34,14 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Cadastrar" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Voltar", "Index")
 </div>
 
 @section Scripts {
